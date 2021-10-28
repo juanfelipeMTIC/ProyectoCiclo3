@@ -1,0 +1,64 @@
+form {
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    font-family: serif;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+}
+form input [type="text"] {
+    width: 200px;
+    font-size: 20px;
+}
+form input[type="submit"] {
+    width: 150px;
+}
+form input {
+    margin-top: 20px;
+}
+form input[type="submit"]{
+    font-weight: bold; /*sirve para colocar en negrita */
+    display: block; /*sirve para centrar el boton de enviar*/
+    margin:auto; /*sirve para centrar el boton de enviar*/
+    margin-top: 20px;
+} 
+form div input [type="checkbox"] {
+    display:flex;
+}
+form label {
+    font-size: 17px;
+}
+section .portada .registro p {
+    font-size: 18px;
+    text-align: center;
+}
+section .portada .registro p span {
+    color: rgb(173, 31, 31);
+    text-decoration-line: underline;
+}
+section div .regresar p {
+    font-size: 18px;
+    text-align: center;
+}
+section div .regresar p span {
+    color: rgb(173, 31, 31);
+    text-decoration-line: underline;
+}
+section .buscador [type="text"] {
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    display: block; 
+    display:flex;
+    margin:auto; 
+    margin-top: 20px;
+}
+section .buscador img {
+    width: 25px;  
+    display: block; 
+    display:left;
+    margin:auto; 
+    margin-top: 10px;
+    margin-bottom: 50px;
+}

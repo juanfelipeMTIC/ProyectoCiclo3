@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/headerandfooter.css">
+    {%block titulo%}
+    {% endblock %}
+</head>
+<body>
+    <header><!--encabezado-->
+        <div class= "encabezado"> <!--class se usa para colocar nombres, identificador no necesariamente unico, se puede repetir. div es una seccion con color, como un banner-->
+            <div class="presentacion">
+                <div class="logo">
+                    <img href="/" src="static/img/logo.jpeg" alt=""> <!-- el alt es en caso de dar alguna altura en especifico-->
+                </div>
+                <div class="bienvenida">
+                    <h3>Drink App</h3>
+                    <p class="tamaño">Para lo que quieras beber </p>
+                </div>
+            </div>
+            <div class="accion">
+                <nav> <!--barra de navegacion-->
+                    <ul class="Lista"> <!--para hacer listas-->
+                        <li><a href="/">Inicio </a></li>
+                        <li><a href="/login">Login </a></li> <!--para colocar una lista-->
+                        <li><a href="/menu">Menú </a></li>
+                        <li><a href="/busqueda">Búsqueda </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    {% block contenido %}
+    {% endblock %}
+    <footer><!--pie de pagina-->
+        <p>
+            Drink App
+            <span class="guion" >Kiara Figueroa</span>
+            <span class="guion" >Cristian Martinez</span>
+            <span class="guion" >Juan Pastrana</span>
+            <span class="guion" >Juan Carlos Pinzon</span>
+        </p>
+    </footer>
+</body>
+{%block scripts%}
+{%endblock%}
+</html>

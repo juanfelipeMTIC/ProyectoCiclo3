@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<title>Registro - Drink App</title>
+{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="static/css/body.css">
+<section class="contenedor-registro">
+    <div>
+        <div class="formulario-registro">
+            <h1>Registro de nuevo usuario </h1>
+            <form action="/registro" method="post" onsubmit="return validar-formulario_registro()">
+                <div>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </div>
+                <div>
+                    <input type="text" name="usuario" id="ususario" placeholder="Usuario">
+                </div>
+                <div>
+                    <input type="text" name="correo" id="correo" placeholder="Correo">
+                </div>
+                <div>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña"><br>
+                    <input type="checkbox" id="verContrasena" name="verContrasena" value="verContrasena">
+                    <label for="verContrasena"> Ver contraseña </label><br>
+                </div>
+                <div>
+                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Contraseña"><br>
+                    <input type="checkbox" id="verContrasena" name="verContrasena" value="verContrasena">
+                    <label for="verContrasena"> Ver contraseña </label><br>
+                </div>
+                <input type="submit" value="Iniciar sesion">
+            </form>
+        </div>
+        <div class="regresar">
+            <p>
+                ¿Ya tienes cuenta?
+                <span style="cursor: pointer"> Inicia Sesion </span>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/registro.js') }}"></script>
+{% endblock %}

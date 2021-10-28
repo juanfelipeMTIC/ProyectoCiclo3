@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<title>Búsqueda - Drink App</title>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/headerandfooter.css') }}" />
+{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="static/css/body.css">
+<section class="contenero-busqueda">
+    <div class="request">
+        <h1>¿Qué bebida buscas? </h1>
+    </div>
+    <div class="buscador">
+        <input type="text" placeholder="Buscar" name="usuario" id="input_usuario">
+        <img src="{{ url_for('static', filename='img/lupa.png') }}" alt="" id="buscar_usuario">
+    </div>
+</section>
+{% endblock %} 
+
+{% block scripts %}
+
+{% endblock %}

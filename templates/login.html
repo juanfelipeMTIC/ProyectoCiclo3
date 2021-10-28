@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block titulo %} 
+<title>Iniciar Sesion _ Drink App</title>
+{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="static/css/body.css">
+<section class="contenedor">
+    <div class="portada">
+        <div class="iniciar-sesion">
+            <h1>Ingresa a tu perfil</h1>
+            <form action="/login" method="post">
+                <div>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario"><br>
+                </div>
+                <div>
+                    <input type="text" name="contrasena" id="contrasena" placeholder="Contraseña"><br>
+                    <input type="checkbox" id="verContrasena" name="verContrasena" value="verContrasena">
+                    <label for="verContrasena"> Ver contraseña </label><br>
+                </div>
+                <input type="submit" value="Iniciar Sesion">
+            </form>
+        </div>
+        <div class=registro>
+            <p>
+                ¿No tienes cuenta?
+                <span style="cursor: pointer"> Registrate </span>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/login.js' ) }}"></script>
+{% endblock %}
