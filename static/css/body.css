@@ -1,13 +1,22 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
 form {
     width: 350px;
     padding: 16px;
     border-radius: 10px;
-    font-family: serif;
+    
     text-align: center;
     margin: auto;
     font-size: 25px;
 }
 form input [type="text"] {
+    border-radius: 10px;
+    background-color: aqua;
+    border: 0px;
     width: 200px;
     font-size: 20px;
 }
@@ -62,3 +71,4 @@ section .buscador img {
     margin-top: 10px;
     margin-bottom: 50px;
 }
+

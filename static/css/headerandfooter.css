@@ -1,9 +1,14 @@
 h1 {
-    font-family: serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: rgb(173, 31, 31);
     font-size: 25px;
 }
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 footer {
     background: rgba(255, 228, 181, 0.719);
