@@ -10,27 +10,28 @@
     <div>
         <div class="formulario-registro">
             <h1>Registro de nuevo usuario </h1>
-            <form action="/registro" method="post" onsubmit="return validar-formulario_registro()">
+            <form action="/registro" method="post" onsubmit="return validar_formulario_registro()">
+   
                 <div>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                 </div>
                 <div>
-                    <input type="text" name="usuario" id="ususario" placeholder="Usuario">
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario">
                 </div>
                 <div>
                     <input type="text" name="correo" id="correo" placeholder="Correo">
                 </div>
                 <div>
-                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña"><br>
-                    <input type="checkbox" id="verContrasena" name="verContrasena" value="verContrasena">
-                    <label for="verContrasena"> Ver contraseña </label><br>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+                    <img src="{{ url_for('static', filename='img/Open_eye.png') }}" width="20px"/ id="ver_contrasena">                    
+                    <br>
                 </div>
                 <div>
-                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Contraseña"><br>
-                    <input type="checkbox" id="verContrasena" name="verContrasena" value="verContrasena">
-                    <label for="verContrasena"> Ver contraseña </label><br>
+                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Contraseña">
+                    <img src="{{ url_for('static', filename='img/Open_eye.png') }}" width="20px"/ id="ver_confirmar_contrasena">                    
+                    <br>
                 </div>
-                <input type="submit" value="Iniciar sesion">
+                <input type="submit" value="Registrate">
             </form>
         </div>
         <div class="regresar">
