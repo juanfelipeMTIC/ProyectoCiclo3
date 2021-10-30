@@ -5,38 +5,66 @@
 {% endblock %}
 
 {% block contenido %}
+<link rel="stylesheet" href="static/css/inicio.css">
 <section><!--contenido de la pagina web-->
     <form action="/menu" method="post">
-        <article>
-            <div class="contenido">
-                <div class="imagen">
-                    <img src="assets/images.png" alt="">
-                </div>
-                <div>
-                    <div class="titulo-autor">
-                        <h5>titulo de la targeta</h5><!--h5 marca los titulos-->
-                        <p>aqui va el <span>autor</span></p>
-                    </div>
-                    <div>
-                        <div class="tag">
-                            Python
-                        </div>
-                        <div class="tiempo">
-                            hace 10 mins
-                        </div>
-                    </div>
-                </div>
+        <div class="contenido">
+            <h3>Nuestros productos</h3>
+            <div class="producto">
+                <article>
+                    <h5>Batido verde </h5>
+                    <img src="static/img/verde.jpg" alt="">
+                    <p>
+                    Mezcla de frutas y vegetales verdes como pimentón, manzana, apio, brocoli y kiwi
+                    <span style="cursor: pointer">Agregar a Lista de deseos </span>
+                    </p>
+                </article>
+                <article>
+                    <h5>Daiquiri de sandia </h5>
+                    <img src="static/img/sandia.jpg" alt="">
+                    <p>
+                    Refrescante mezcla de ron blanco, zumo de limón y pulpa de sandia
+                    <span style="cursor: pointer">Agregar a Lista de deseos </span>
+                    </p>
+                </article>
+                <article>
+                    <h5>Daiquiri de Fresas </h5>
+                    <img src="static/img/coctel2.jpg" alt="">
+                    <p>
+                    Mezcla de licor de fresa, fresas, zumo de limón y Ron blanco a la temperatura ideal
+                    <span style="cursor: pointer">Agregar a Lista de deseos </span>
+                    </p>
+                </article>
+                <article>
+                    <h5>Jugo de naranja </h5>
+                    <img src="static/img/naranja.jpg" alt="">
+                    <p>
+                    Jugo natural a base de naranjas con una cantidad saludable de azúcar
+                    <span style="cursor: pointer">Agregar a Lista de deseos </span>
+                    </p>
+                </article>
+                <article>
+                    <h5>Café con leche </h5>
+                    <img src="static/img/cafe.jpg" alt="">
+                    <p>
+                    Café con la cantidad de leche perfecta y un toque de azúcar
+                    <span style="cursor: pointer">Agregar a Lista de deseos </span>
+                    </p>
+                </article>
+                <article>
+                    <h5>Masala Chai </h5>
+                    <img src="static/img/te.jpg" alt="">
+                    <p><br>
+                    Té negro con anís, clavos de olor, cardamomo, jengibre, pimienta y canela
+                    <span style="cursor: pointer">Agregar a Lista de deseos </span>
+                    </p>
+                </article>
             </div>
-            <div class="estadisticas">
-                <div class="contador">
-                    <p><span>flecha arriba</span> numero <span>flecha abajo</span></p>
-                </div>
-                <div class="iconos">
-                    <p>10 <span>estrellita</span></p>
-                </div>
-            </div>
-        </article> <!--article, articulo puntual que se muestra al usuario-->
+        <div>                
     </form>
 </section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/menu.js' ) }}"></script>
 {% endblock %}
 
