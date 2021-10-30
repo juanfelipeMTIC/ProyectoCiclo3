@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block titulo %} 
+<title>Menú - Drink App</title>
+{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="static/css/inicio.css">
+<link rel="stylesheet" href="static/css/body.css">
+<section><!--contenido de la pagina web-->
+    <h1>Realiza tu pedido</h1>
+    <form action="/pedir" method="post" >
+        <div class="contenido">
+            <div>
+                <input type="text" name="nombre" id="nombre" placeholder="Producto"><br>
+            </div>
+            <div>
+                <input type="number" name="cantidad" id="cantidad" placeholder="Cantidad"><br>
+            </div>
+            <input type="submit" value="Enviar">
+        <div>                
+    </form>
+</section>
+{% endblock %}
+{% block scripts %}
+{% endblock %}           
+        
+        

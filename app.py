@@ -1,3 +1,4 @@
+from ast import Str
 from flask import Flask, render_template, request, session, redirect
 import werkzeug.security as ws
 from werkzeug.utils import redirect  # libreria para guardar contraseñas
@@ -85,6 +86,28 @@ def buscar():
 def menu():
     return render_template('menu.html')
 
+@app.route('/deseos')
+def deseos():
+    return render_template('deseos.html')
+
+@app.route('/pedido')
+def pedido():
+    return render_template('pedido.html')
+
+@app.route('/pedir', methods=['POST'])
+def pedir():
+    producto = request.form['nombre']
+    cantidad = request.form['cantidad']
+    precioUnitario=db.obtener_registro('Productos', 'nombre="{}"'.format(producto))
+    respuesta=0
+    for i in precioUnitario:
+        respuesta= respuesta + int(i)
+    precioTotal=respuesta* int(cantidad)
+    #return(str(precio))
+
+    db.insert_pedido(producto, cantidad, precioUnitario, precioTotal)
+    return ('Pedido realizado con Éxito')
 
 if __name__ == '__main__':
     app.run(debug=True)
+

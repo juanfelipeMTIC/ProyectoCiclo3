@@ -24,11 +24,33 @@ def obtener_registros(tabla, condicion=None):
 
     return datos
 
+def obtener_registro(tabla, condicion):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    strsql= 'SELECT precio FROM {} WHERE {}'.format(tabla, condicion)
+
+    cursor.execute(strsql)
+    datos = cursor.fetchall()
+    conexion.close()
+
+    return datos
+
 def insert_usuario(nombre, usuario, correo, contraseña):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
 
     strsql = "INSERT INTO Usuarios (nombre, usuario, correo, contrasena) VALUES ('{}','{}','{}','{}')".format(nombre, usuario, correo, contraseña)
+
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()
+
+
+def insert_pedido(producto, cantidad, precioUnitario, precioTotal):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+
+    strsql = "INSERT INTO Pedidos (producto, cantidad. precioUnitario, precioTotal) VALUES ('{}','{}','{}','{}')".format(producto, cantidad, precioUnitario, precioTotal)
 
     cursor.execute(strsql)
     conexion.commit()
