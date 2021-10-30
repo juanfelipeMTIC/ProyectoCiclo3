@@ -19,6 +19,12 @@ def perfil():
     return render_template('perfil.html')
 
 
+@app.route('/cerrar_sesion')
+def cerrarSesion():
+    if 'usuario' in session:
+        session.pop('usuario')
+    return redirect('/login')
+
 @app.route('/login')
 def login():
     return render_template('login.html')
@@ -50,6 +56,7 @@ def peticion_previa():
         return redirect('/login')
     elif 'usuario' in session and request.endpoint in ['login', 'registro']:        
         print("usuario en sesion")
+        print(session['usuario'])
         return redirect('/perfil')
         
 

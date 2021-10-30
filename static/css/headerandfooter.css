@@ -76,3 +76,24 @@ header nav .Lista li a {
 header nav .Lista li {
     margin-left: 50px;
 }
+
+input[type='button']{
+    
+    font-weight: bold; /*sirve para colocar en negrita */
+    display: block; /*sirve para centrar el boton de enviar*/
+    margin:auto; /*sirve para centrar el boton de enviar*/
+    margin-top: 20px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 26, 10);
+    border-radius: 15px;
+    border: 0px;
+    width: 300px;
+    height: 30px;
+    transition: all 300ms ease;
+} 
+
+input[type='button']:hover{
+    cursor: pointer;
+    background-color: rgb(255, 92, 64);
+}
