@@ -37,3 +37,10 @@ def registro():
 @app.route('/busqueda')
 def buscar():
     return render_template('busqueda.html')
+
+@app.route('/menu')
+def menu():
+    return render_template('menu.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
