@@ -15,9 +15,8 @@
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario"><br>
                 </div>
                 <div>
-                    <input type="text" name="contrasena" id="contrasena" placeholder="Contraseña"><br>
-                    <input type="checkbox" id="verContrasena" name="verContrasena" value="verContrasena">
-                    <label for="verContrasena"> Ver contraseña </label><br>
+                    <input type="text" name="contrasena" id="contrasena" placeholder="Contraseña">
+                    <img src="{{ url_for('static', filename='img/Open_eye.png') }}" width="20px"/ id="ver_contrasena">       
                 </div>
                 <input type="submit" value="Iniciar Sesion">
             </form>

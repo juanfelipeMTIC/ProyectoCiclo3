@@ -3,53 +3,79 @@ body{
 }
 
 form {
-    width: 350px;
-    padding: 16px;
-    border-radius: 10px;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: bisque;
+    width: 340px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+
+
+
+form input[type="text"], input[type='password'] {    
     
-    text-align: center;
-    margin: auto;
-    font-size: 25px;
-}
-form input [type="text"] {
-    border-radius: 10px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
     border: 0px;
-    width: 200px;
-    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    font-size: 12px;
 }
-form input[type="submit"] {
-    width: 150px;
-}
+
 form input {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 form input[type="submit"]{
+    
     font-weight: bold; /*sirve para colocar en negrita */
     display: block; /*sirve para centrar el boton de enviar*/
     margin:auto; /*sirve para centrar el boton de enviar*/
     margin-top: 20px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 26, 10);
+    border-radius: 15px;
+    border: 0px;
+    width: 300px;
+    height: 30px;
+    transition: all 300ms ease;
 } 
-form div input [type="checkbox"] {
-    display:flex;
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: rgb(255, 92, 64);
 }
+
+
+
+
+
+
+
 form label {
     font-size: 17px;
 }
 section .portada .registro p {
     font-size: 18px;
     text-align: center;
+    transition: all 300ms ease;
 }
 section .portada .registro p span {
     color: rgb(173, 31, 31);
+    transition: all 300ms ease;
     text-decoration-line: underline;
 }
 section div .regresar p {
     font-size: 18px;
     text-align: center;
+    
+    
 }
 section div .regresar p span {
     color: rgb(173, 31, 31);
+    transition: all 300ms ease;
     text-decoration-line: underline;
 }
 section .buscador [type="text"] {
@@ -61,6 +87,16 @@ section .buscador [type="text"] {
     margin:auto; 
     margin-top: 20px;
 }
+
+
+.portada .registro p span:hover{
+    color: rgb(255, 0, 0);
+}
+
+.regresar p span:hover{
+    color: rgb(255, 0, 0);
+}
+
 section .buscador img {
     width: 25px;  
     display: block; 
