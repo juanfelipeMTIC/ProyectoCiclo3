@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import werkzeug.security as ws
 from werkzeug.utils import redirect  # libreria para guardar contraseñas
-#import db
+import db
 
 app = Flask(__name__)
 app.secret_key = 'mi_clave_secreta'
@@ -32,7 +32,9 @@ def registrarUsuario():
     correo = request.form['correo']
     contraseña = request.form['contrasena']
     confirmar_contraseña = request.form['confirmar_contrasena']
-    return redirect('/login')
+
+    db.insert_usuario(nombre, usuario, correo, ws.generate_password_hash(contraseña))
+    return render_template('perfil.html')
 
 
 @app.route('/busqueda')
