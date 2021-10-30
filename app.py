@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect
 import werkzeug.security as ws
 from werkzeug.utils import redirect  # libreria para guardar contraseñas
 import db
@@ -7,19 +7,51 @@ app = Flask(__name__)
 app.secret_key = 'mi_clave_secreta'
 
 
+
+
+
 @app.route('/')
 def inicio():
     return render_template('inicio.html')
 
+@app.route('/perfil')
+def perfil():
+    return render_template('perfil.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+
+@app.route('/login')
 def login():
-    if request.method == 'GET':
-        return render_template('login.html')
-    else:
-        print(request.form)  # validar
-        return render_template('perfil.html')
+    return render_template('login.html')
 
+@app.route('/iniciar_sesion', methods=['POST'])
+def iniciarSesion():
+    usuario = request.form['usuario']
+    contraseña = request.form['contrasena']    
+
+    registro_usuario = db.obtener_registros('Usuarios', "usuario = '{}'".format(usuario))
+    if(registro_usuario):
+        contraseñaDb = registro_usuario[0][4] #registro_usuario es un vector, [0] es la fila del usuario
+        #4 es la posición necesaria
+        inicio_exitoso = ws.check_password_hash(contraseñaDb,contraseña)
+        
+        if(inicio_exitoso):
+            session['usuario'] = usuario
+            return render_template('perfil.html')
+        else:
+            return 'la contraseña o el nombre de Usuario son incorrectos'
+    else:
+        return 'El usuario no existe'
+
+
+@app.before_request
+def peticion_previa():
+    if('usuario' not in session and request.endpoint in ['perfil']):
+        print("usuario fuera de sesion")
+        return redirect('/login')
+    elif 'usuario' in session and request.endpoint in ['login', 'registro']:        
+        print("usuario en sesion")
+        return redirect('/perfil')
+        
 
 @app.route('/registro')
 def registro():

@@ -14,11 +14,11 @@ def obtener_registros(tabla, condicion=None):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
     if condicion:
-        strsql = 'SELECT * FROM {} WHERE{}'.format(tabla, condicion)
+        strsql = 'SELECT * FROM {} WHERE {}'.format(tabla, condicion)
     else:
         strsql = 'SELECT * FROM {}'.format(tabla)
 
-    Cursor.execute(strsql)
+    cursor.execute(strsql)
     datos = cursor.fetchall()
     conexion.close()
 
