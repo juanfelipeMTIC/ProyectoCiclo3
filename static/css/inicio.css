@@ -33,16 +33,29 @@ section form .contenido .producto article{
     width: 280px;
 }
 section form .contenido .producto img{
-    margin-top: 0px;
+    margin-top: 20px;
     margin-left: 70px;
     margin-right: 70px;
     width: 280px;
 }
-section form .contenido .producto h5{
-    font-size: 35px;
+section form .contenido .producto nav .Lista li a{
+    font-size: 28px;
     color: #dd4f24;
     text-align: center;
     margin-bottom: 20px;
+    text-decoration: none;
+}
+section form .contenido .producto nav .Lista .span li a {
+    color: rgb(173, 31, 31);
+    text-decoration-line: underline;
+    text-align: center;
+    display: grid;
+    font-size: 15px;
+    margin-top: 20px;
+}
+section form .contenido .producto nav .Lista {
+    list-style: none;
+    text-align: center;
 }
 section form .contenido .producto p{
     font-size: 20px;
@@ -50,12 +63,4 @@ section form .contenido .producto p{
     width: 280px;
     margin-left: 68px;
     margin-bottom: 40px;
-}
-section form .contenido .producto p span {
-    color: rgb(173, 31, 31);
-    text-decoration-line: underline;
-    text-align: center;
-    display: grid;
-    font-size: 15px;
-    margin-top: 20px;
 }
