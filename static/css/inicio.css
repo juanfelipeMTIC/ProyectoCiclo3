@@ -1,0 +1,61 @@
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(173, 31, 31);
+    font-size: 25px;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section form div h3 {
+    font-size: 60px;
+    color: #dd4f24;
+    text-align: center;
+}
+section form div p {
+    font-size: 30px;
+    text-align: center;
+}
+section form div img {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+section form .contenido h3 {
+    font-size: 60px;
+    color: #dd4f24;
+    text-align: center;
+}
+section form .contenido .producto article{
+    display: inline-table;
+    width: 280px;
+}
+section form .contenido .producto img{
+    margin-top: 0px;
+    margin-left: 70px;
+    margin-right: 70px;
+    width: 280px;
+}
+section form .contenido .producto h5{
+    font-size: 35px;
+    color: #dd4f24;
+    text-align: center;
+    margin-bottom: 20px;
+}
+section form .contenido .producto p{
+    font-size: 20px;
+    text-align: center;
+    width: 280px;
+    margin-left: 68px;
+    margin-bottom: 40px;
+}
+section form .contenido .producto p span {
+    color: rgb(173, 31, 31);
+    text-decoration-line: underline;
+    text-align: center;
+    display: grid;
+    font-size: 15px;
+    margin-top: 20px;
+}

@@ -7,7 +7,7 @@ app.secret_key = 'mi_clave_secreta'
 
 @app.route('/')
 def inicio():
-    return render_template('base.html')
+    return render_template('inicio.html')
 
 @app.route('/login',methods=['GET', 'POST'])
 def login():
