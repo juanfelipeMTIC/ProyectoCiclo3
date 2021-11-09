@@ -35,6 +35,18 @@ def obtener_registro(tabla, condicion):
 
     return datos
 
+
+def obtener_productos(tabla):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    strsql= 'SELECT * FROM {}'.format(tabla)
+
+    cursor.execute(strsql)
+    datos = cursor.fetchall()
+    conexion.close()
+
+    return datos
+
 def insert_usuario(nombre, usuario, correo, contraseña):
     conexion = obtener_conexion()
     cursor = conexion.cursor()

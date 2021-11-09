@@ -13,73 +13,18 @@
             <div class="producto">
                 <nav>
                     <ul class="Lista">
-                        <article id="uno">
-                            <li><a href="/pedido">Batido Verde </a></li> 
-                            <img src="static/img/verde.jpg" alt="">
-                            <p>
-                            Mezcla de frutas y vegetales verdes como pimentón, manzana, apio, brocoli y kiwi
-                            </p>
-                            <b>$12.000</b>
-                            <div class="span" >
-                                <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
-                            </div>
-                            
-                        </article>
-                        <article id="dos">
-                            <li><a href="/pedido">Daiquiri de sandia </a></li> 
-                            <img src="static/img/sandia.jpg" alt="">
-                            <p>
-                            Refrescante mezcla de ron blanco, zumo de limón y pulpa de sandia
-                            </p>
-                            <b>$13.000</b>
-                            <div class="span" >
-                                <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
-                            </div>
-                        </article>
-                        <article id="tres">
-                            <li><a href="/pedido">Daiquiri de fresa </a></li> 
-                            <img src="static/img/coctel2.jpg" alt="">
-                            <p>
-                            Mezcla de licor de fresa, fresas, zumo de limón y Ron blanco a la temperatura ideal
-                            </p>
-                            <b>$14.000</b>
-                            <div class="span" >
-                                <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
-                            </div>
-                        </article>
-                        <article id="cuatro">
-                            <li><a href="/pedido">Jugo de naranja </a></li> 
-                            <img src="static/img/naranja.jpg" alt="">
-                            <p>
-                            Jugo natural a base de naranjas con una cantidad saludable de azúcar
-                            </p>
-                            <b>$5.000</b>
-                            <div class="span" >
-                                <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
-                            </div>
-                        </article>
-                        <article id="cinco">
-                            <li><a href="/pedido">Café con leche </a></li> 
-                            <img src="static/img/cafe.jpg" alt="">
-                            <p>
-                            Café con la cantidad de leche perfecta y un toque de azúcar
-                            </p>
-                            <b>$6.000</b>
-                            <div class="span" >
-                                <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
-                            </div>
-                        </article>
-                        <article id="seis">
-                            <li><a href="/pedido">Masala Chai </a></li> 
-                            <img src="static/img/te.jpg" alt="">
-                            <p><br>
-                            Té negro con anís, clavos de olor, cardamomo, jengibre, pimienta y canela
-                            </p>
-                            <b>$8.000</b>
-                            <div class="span" >
-                                <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
-                            </div>
-                        </article>
+                        
+                        {% for i in range(leng) %}
+                            <article id= '{{ listaProductos[i][0] }}'>
+                                <li><a href="/pedido">{{ listaProductos[i][1] }}</a></li>
+                                <p>{{ listaProductos[i][3] }}</p>
+                                <b>${{ listaProductos[i][2] }}</b>
+                                <div class="span" >
+                                    <li><a href="/deseos" style="cursor: pointer" onclick="return contenido ()">Agregar a Lista de deseos </a></li> 
+                                </div>
+                            </article>
+                        {% endfor %}
+                        
                     </ul>
                 </nav>
             </div>
@@ -91,3 +36,4 @@
 <script src="{{ url_for('static', filename='js/menu.js' ) }}"></script>
 {% endblock %}
 
+                            

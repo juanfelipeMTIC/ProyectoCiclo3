@@ -59,6 +59,7 @@ header .accion {
     float: right;
 }
 header nav {
+    background-color: aliceblue;
     padding: 8px 0px 8px 0px;
 }
 header nav .Lista {

@@ -1,7 +1,7 @@
 btn_registrate=document.querySelector('.registro p span')
 
 btn_registrate.addEventListener('click', () =>{
-    window.location.href='/registro'
+    window.location.href='/registro';
 })
 
 let img_mostrar_contrasena = document.getElementById('ver_contrasena');
